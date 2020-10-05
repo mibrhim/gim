@@ -34,7 +34,7 @@ type NoficationMessage struct {
 // it creates the different modules and register them to the system
 // and then it initiates the system by sending the first message
 func main() {
-	fmt.Printf("[gimTest] Starting Test Program\n")
+	fmt.Printf("[gimSample] Starting Test Program\n")
 
 	// create the module variables
 	var moduleOneAgent ModuleOneAgent

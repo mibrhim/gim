@@ -27,8 +27,13 @@ func (a ModuleOneAgent) OnReceive(im gim.IMessage) {
 	// if the message is a Notification message
 	case NOTIFICATION_MESSAGE:
 		// convert the payload to the structure of the notification message
-		NotificationMessage, _ := im.Payload.(NoficationMessage)
-		fmt.Printf("[gimTest] module One has OnReceive method with %s \n", NotificationMessage.data)
+		NotificationMessage, ok := im.Payload.(NoficationMessage)
+		if !ok {
+			fmt.Printf("[gimSample] Wrong type for message %d \n", im.MessageType)
+			return
+		}
+
+		fmt.Printf("[gimSample] module One has OnReceive method with %s \n", NotificationMessage.data)
 	}
 
 	// prepare the reply to the incoming message
