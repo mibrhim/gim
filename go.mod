@@ -1,3 +1,3 @@
-module github.com/mhmod1990/gim
+module github.com/mibrhim/gim
 
 go 1.14
