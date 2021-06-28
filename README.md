@@ -10,7 +10,7 @@ to use this library you can import it using
 import (
   "fmt"
 
-	"github.com/mhmod1990/gim"
+	"github.com/mibrhim/gim"
 )
 ```
 and then you have to create the modules (domains) which you want to add to the platform, this module must implement the `IAgent` interface function `OnReceive(im gim.IMessage` such as:
